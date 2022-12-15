@@ -151,3 +151,7 @@ buffer_delete(data);
 window_mouse_set(window_get_width() / 2, window_get_height() / 2);
 
 application_surface_draw_enable(false);
+
+self.surf_gbuff_diffuse = -1;
+self.surf_gbuff_normal = -1;
+self.surf_gbuff_depth = -1;

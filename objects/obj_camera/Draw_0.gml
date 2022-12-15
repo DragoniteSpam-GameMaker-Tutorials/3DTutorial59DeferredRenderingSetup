@@ -1,3 +1,9 @@
+surface_set_target(self.surf_gbuff_diffuse);
+surface_set_target_ext(1, self.surf_gbuff_normal);
+surface_set_target_ext(2, self.surf_gbuff_depth);
+
+draw_clear(c_black);
+
 var cam = camera_get_active();
 var xto = self.player.x;
 var yto = self.player.y;
@@ -13,9 +19,9 @@ camera_apply(cam);
 gpu_set_cullmode(cull_counterclockwise);
 gpu_set_zwriteenable(true);
 gpu_set_ztestenable(true);
-shader_set(shd_demo);
+shader_set(shd_forward);
 
-shader_set_uniform_f(shader_get_uniform(shd_demo, "u_LightAmbient"), 0.1, 0.1, 0.1);
+shader_set_uniform_f(shader_get_uniform(shd_forward, "u_LightAmbient"), 0.1, 0.1, 0.1);
 
 var ir3 = 1 / sqrt(3);
 
@@ -29,8 +35,8 @@ var directional_light_colors = [
     0.3, 0.3, 0.3,
 ];
 
-shader_set_uniform_f_array(shader_get_uniform(shd_demo, "u_DirectionalLights"), directional_lights);
-shader_set_uniform_f_array(shader_get_uniform(shd_demo, "u_DirectionalLightColors"), directional_light_colors);
+shader_set_uniform_f_array(shader_get_uniform(shd_forward, "u_DirectionalLights"), directional_lights);
+shader_set_uniform_f_array(shader_get_uniform(shd_forward, "u_DirectionalLightColors"), directional_light_colors);
 
 var point_lights = [
     0, 0, 64, 128,
@@ -42,8 +48,8 @@ var point_light_colors = [
     0.9, 0.6, 0.6,
 ];
 
-shader_set_uniform_f_array(shader_get_uniform(shd_demo, "u_PointLights"), point_lights);
-shader_set_uniform_f_array(shader_get_uniform(shd_demo, "u_PointLightColors"), point_light_colors);
+shader_set_uniform_f_array(shader_get_uniform(shd_forward, "u_PointLights"), point_lights);
+shader_set_uniform_f_array(shader_get_uniform(shd_forward, "u_PointLightColors"), point_light_colors);
 
 vertex_submit(self.vb_floor, pr_trianglelist, -1);
 
@@ -86,3 +92,5 @@ gpu_set_zwriteenable(false);
 gpu_set_ztestenable(false);
 shader_reset();
 matrix_set(matrix_world, matrix_build_identity());
+
+surface_reset_target();
