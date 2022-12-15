@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "3DTutorial57DeferredRendering",
-    "path": "3DTutorial57DeferredRendering.yyp",
+    "name": "3DTutorial59DeferredRenderingSetup",
+    "path": "3DTutorial59DeferredRenderingSetup.yyp",
   },
 }

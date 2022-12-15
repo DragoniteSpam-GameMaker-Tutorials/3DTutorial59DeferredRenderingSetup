@@ -1,7 +1,7 @@
 {
   "resourceType": "GMProject",
   "resourceVersion": "1.6",
-  "name": "3DTutorial57DeferredRendering",
+  "name": "3DTutorial59DeferredRenderingSetup",
   "resources": [
     {"id":{"name":"spr_terrain","path":"sprites/spr_terrain/spr_terrain.yy",},"order":23,},
     {"id":{"name":"duck_right","path":"sprites/duck_right/duck_right.yy",},"order":3,},
@@ -10,7 +10,7 @@
     {"id":{"name":"Objects","path":"scripts/Objects/Objects.yy",},"order":7,},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":4,},
     {"id":{"name":"duck_back","path":"sprites/duck_back/duck_back.yy",},"order":0,},
-    {"id":{"name":"shd_demo","path":"shaders/shd_demo/shd_demo.yy",},"order":6,},
+    {"id":{"name":"shd_forward","path":"shaders/shd_forward/shd_forward.yy",},"order":6,},
     {"id":{"name":"surface_validate","path":"scripts/surface_validate/surface_validate.yy",},"order":24,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":5,},
   ],
@@ -20,10 +20,10 @@
     {"name":"iOS","path":"options/ios/options_ios.yy",},
     {"name":"Linux","path":"options/linux/options_linux.yy",},
     {"name":"macOS","path":"options/mac/options_mac.yy",},
-    {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"tvOS","path":"options/tvos/options_tvos.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"Main","path":"options/main/options_main.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
@@ -61,6 +61,6 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"terrain2.vbuff","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.11.0.54",
+    "IDEVersion": "2022.11.1.56",
   },
 }
