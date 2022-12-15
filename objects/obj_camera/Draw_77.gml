@@ -1,1 +1,1 @@
-draw_surface_stretched(application_surface, 0, 0, window_get_width(), window_get_height());
+draw_surface_stretched(self.surf_gbuff_normal, 0, 0, window_get_width(), window_get_height());
